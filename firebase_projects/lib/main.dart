@@ -2,13 +2,15 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_projects/Routes/Routes.dart';
 import 'package:firebase_projects/Routes/RoutesName.dart';
 import 'package:firebase_projects/View_Model/firebase_viewmodel.dart';
+import 'package:firebase_projects/firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
-
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  //firebase Initalization
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(const MyApp());
 }
 
