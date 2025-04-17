@@ -1,5 +1,7 @@
+import 'package:firebase_projects/view-/Home_view.dart';
+
 import 'RoutesName.dart';
-import '../view-/home_view.dart';
+import '../view-/SignUp_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -9,6 +11,13 @@ class Routes {
         {
           return MaterialPageRoute(
             builder: (BuildContext context) => HomeView(),
+          );
+        }
+
+      case Routesname.signUp:
+        {
+          return MaterialPageRoute(
+            builder: (BuildContext context) => SignupView(),
           );
         }
 

@@ -6,16 +6,17 @@ import 'package:firebase_projects/firebase_options.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   //firebase Initalization
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key}); 
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +45,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
 
-                initialRoute: Routesname.home,
+                initialRoute: Routesname.signUp,
                 onGenerateRoute: Routes.generate_Route,
               );
             },
