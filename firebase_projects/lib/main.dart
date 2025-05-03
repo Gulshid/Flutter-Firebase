@@ -18,7 +18,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
+  @override .
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(360, 690),
