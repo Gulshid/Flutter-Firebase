@@ -1,4 +1,6 @@
 
+import 'package:firebase_backend/Routes/Routes.dart';
+import 'package:firebase_backend/Routes/Routesname.dart';
 import 'package:firebase_backend/firebase_options.dart';
 import 'package:firebase_backend/viewModel/fireProvider.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -17,7 +19,7 @@ void main() async {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override .
+  @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: Size(360, 690),
@@ -44,8 +46,8 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
 
-                // initialRoute: Routesname.signUp,
-                // onGenerateRoute: Routes.generate_Route,
+                initialRoute: Routesname.signUp,
+                onGenerateRoute: Routes.generateRoute,
               );
             },
           ),
