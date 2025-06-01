@@ -1,6 +1,7 @@
 import 'package:firebase_backend/Routes/Routesname.dart';
 import 'package:firebase_backend/views_/SignUp_view.dart';
 import 'package:firebase_backend/views_/home_view.dart';
+import 'package:firebase_backend/views_/login_view.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
@@ -15,10 +16,17 @@ class Routes {
 
       case Routesname.signUp:
         {
-        return MaterialPageRoute(
-          builder: (BuildContext context) => SignupView(),
-        );
-      }
+          return MaterialPageRoute(
+            builder: (BuildContext context) => SignupView(),
+          );
+        }
+
+      case Routesname.login:
+        {
+          return MaterialPageRoute(
+            builder: (BuildContext context) => LoginView(),
+          );
+        }
 
       default:
         {

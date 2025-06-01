@@ -7,14 +7,14 @@ import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class SignupView extends StatefulWidget {
-  const SignupView({super.key});
+class LoginView extends StatefulWidget {
+  const LoginView({super.key});
 
   @override
-  State<SignupView> createState() => _SignupViewState();
+  State<LoginView> createState() => _LoginViewState();
 }
 
-class _SignupViewState extends State<SignupView> {
+class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     final Profire = Provider.of<Fireprovider>(context);
@@ -26,9 +26,9 @@ class _SignupViewState extends State<SignupView> {
         children: [
           Center(
             child: Text(
-              'Sign Up Account',
+              'Login Account',
               style: GoogleFonts.poppins(
-                fontSize: 30.sp,
+                fontSize: 35.sp,
                 fontWeight: FontWeight.bold,
                 color: Colors.lightGreen,
               ),
@@ -82,7 +82,7 @@ class _SignupViewState extends State<SignupView> {
               width: 300.w,
               decoration: BoxDecoration(
                 color: Colors.blue,
-                borderRadius: BorderRadius.circular(18.r),
+                borderRadius: BorderRadius.circular(15.r),
               ),
 
               child:
@@ -90,7 +90,7 @@ class _SignupViewState extends State<SignupView> {
                       ? SpinKitFadingCube(size: 25.sp, color: Colors.orange)
                       : Center(
                         child: Text(
-                          'Sign Up',
+                          'login Now',
                           style: TextStyle(
                             color: Colors.black,
                             fontSize: 20.sp,
@@ -103,15 +103,15 @@ class _SignupViewState extends State<SignupView> {
           SizedBox(height: 20.sp),
           Text.rich(
             TextSpan(
-              text: 'Already have an Account? ',
-              style: GoogleFonts.aBeeZee(fontSize: 18.sp, color: Colors.black),
+              text: 'Don\'t have an account?',
+              style: GoogleFonts.aBeeZee(fontSize: 20.sp, color: Colors.black),
               children: [
                 TextSpan(
-                  text: ' login Now',
+                  text: ' Sign Up',
                   recognizer:
                       TapGestureRecognizer()
                         ..onTap = () {
-                          Navigator.pushNamed(context, Routesname.login);
+                          Navigator.pushNamed(context, Routesname.signUp);
                         },
                   style: GoogleFonts.aBeeZee(
                     fontSize: 20.sp,
