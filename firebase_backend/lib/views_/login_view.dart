@@ -13,7 +13,7 @@ class LoginView extends StatefulWidget {
   @override
   State<LoginView> createState() => _LoginViewState();
 }
-
+//This is Firebase Authentication portion for login
 class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {

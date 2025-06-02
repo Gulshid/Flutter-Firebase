@@ -1,4 +1,5 @@
 import 'package:firebase_backend/Routes/Routesname.dart';
+import 'package:firebase_backend/views_/Reg_view.dart';
 import 'package:firebase_backend/views_/SignUp_view.dart';
 import 'package:firebase_backend/views_/home_view.dart';
 import 'package:firebase_backend/views_/login_view.dart';
@@ -25,6 +26,13 @@ class Routes {
         {
           return MaterialPageRoute(
             builder: (BuildContext context) => LoginView(),
+          );
+        }
+
+      case Routesname.register:
+        {
+          return MaterialPageRoute(
+            builder: (BuildContext context) => RegView(),
           );
         }
 

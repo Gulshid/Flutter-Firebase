@@ -14,6 +14,7 @@ class SignupView extends StatefulWidget {
   State<SignupView> createState() => _SignupViewState();
 }
 
+//This is Firebase Authentication portion for Sign Up
 class _SignupViewState extends State<SignupView> {
   @override
   Widget build(BuildContext context) {
