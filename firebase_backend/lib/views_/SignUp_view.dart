@@ -1,5 +1,5 @@
 import 'package:firebase_backend/Routes/Routesname.dart';
-import 'package:firebase_backend/viewModel/fireProvider.dart';
+import 'package:firebase_backend/viewModel/SignUpProvider.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,7 +17,7 @@ class SignupView extends StatefulWidget {
 class _SignupViewState extends State<SignupView> {
   @override
   Widget build(BuildContext context) {
-    final Profire = Provider.of<Fireprovider>(context);
+    final Profire = Provider.of<Signupprovider>(context);
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Column(
@@ -59,7 +59,7 @@ class _SignupViewState extends State<SignupView> {
             child: TextField(
               obscureText: true,
               obscuringCharacter: '*',
-              controller: Profire.passwordConyroller,
+              controller: Profire.passwordController,
               style: TextStyle(color: Colors.black),
               keyboardType: TextInputType.visiblePassword,
               decoration: InputDecoration(

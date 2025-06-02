@@ -2,7 +2,8 @@
 import 'package:firebase_backend/Routes/Routes.dart';
 import 'package:firebase_backend/Routes/Routesname.dart';
 import 'package:firebase_backend/firebase_options.dart';
-import 'package:firebase_backend/viewModel/fireProvider.dart';
+import 'package:firebase_backend/viewModel/SignUpProvider.dart';
+import 'package:firebase_backend/viewModel/loginProvider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return MultiProvider(
           providers: [
-            ChangeNotifierProvider(create: (_) => Fireprovider()),
+            ChangeNotifierProvider(create: (_) => Signupprovider()),
+            ChangeNotifierProvider(create: (_)=> Loginprovider()),
           ],
 
           child: Builder(
