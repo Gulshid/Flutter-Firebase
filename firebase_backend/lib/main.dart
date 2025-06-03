@@ -5,6 +5,7 @@ import 'package:firebase_backend/firebase_options.dart';
 import 'package:firebase_backend/viewModel/RegProvider.dart';
 import 'package:firebase_backend/viewModel/SignUpProvider.dart';
 import 'package:firebase_backend/viewModel/loginProvider.dart';
+import 'package:firebase_backend/viewModel/logout_deleteProvider.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
             ChangeNotifierProvider(create: (_) => Signupprovider()),
             ChangeNotifierProvider(create: (_)=> Loginprovider()),
             ChangeNotifierProvider(create: (_)=> Regprovider()),
+            ChangeNotifierProvider(create: (_)=>LogoutDeleteprovider()),
           ],
 
           child: Builder(
@@ -50,7 +52,7 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
 
-                initialRoute: Routesname.register,
+                initialRoute: Routesname.login,
                 onGenerateRoute: Routes.generateRoute,
               );
             },

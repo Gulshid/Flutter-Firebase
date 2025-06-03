@@ -1,5 +1,6 @@
 import 'package:firebase_backend/Routes/Routesname.dart';
 import 'package:firebase_backend/viewModel/loginProvider.dart';
+import 'package:firebase_backend/views_/home_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,6 +14,7 @@ class LoginView extends StatefulWidget {
   @override
   State<LoginView> createState() => _LoginViewState();
 }
+
 //This is Firebase Authentication portion for login
 class _LoginViewState extends State<LoginView> {
   @override
@@ -75,7 +77,13 @@ class _LoginViewState extends State<LoginView> {
 
           SizedBox(height: 30.sp),
           GestureDetector(
-            onTap: () => Profire.login(context),
+            onTap: () {
+              Profire.login(context);
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => HomeView()),
+              );
+            },
 
             child: Container(
               height: 50.h,

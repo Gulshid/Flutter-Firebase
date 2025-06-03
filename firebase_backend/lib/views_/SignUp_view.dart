@@ -1,5 +1,6 @@
 import 'package:firebase_backend/Routes/Routesname.dart';
 import 'package:firebase_backend/viewModel/SignUpProvider.dart';
+import 'package:firebase_backend/views_/home_view.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -76,7 +77,10 @@ class _SignupViewState extends State<SignupView> {
 
           SizedBox(height: 30.sp),
           GestureDetector(
-            onTap: () => Profire.signUp(context),
+            onTap: () {
+              Profire.signUp(context);
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>HomeView()));
+            },
 
             child: Container(
               height: 50.h,
