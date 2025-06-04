@@ -85,9 +85,28 @@ class _CrudViewState extends State<CrudView> {
                   itemCount: snapshot.data!.docs.length,
                   itemBuilder: (context, index) {
                     final data = snapshot.data!.docs[index];
-                    return ListTile(
-                      title: Text(data['firstName'].toString()),
-                      subtitle: Text(data['lastName'].toString()),
+                    return Card(
+                      child: ListTile(
+                        title: Text(data['firstName'].toString()),
+                        subtitle: Text(data['lastName'].toString()),
+                        trailing: Row(
+                          children: [
+                            GestureDetector(
+                              onTap: () {
+                                crudProvider.updateDialoge(context, data.id);
+                              },
+                              child: Icon(Icons.edit, color: Colors.blue),
+                            ),
+                            SizedBox(width: 10.w),
+                            GestureDetector(
+                              onTap: () {
+                                crudProvider.deleteData(data.id, context);
+                              },
+                              child: Icon(Icons.delete, color: Colors.red),
+                            ),
+                          ],
+                        ),
+                      ),
                     );
                   },
                 );
