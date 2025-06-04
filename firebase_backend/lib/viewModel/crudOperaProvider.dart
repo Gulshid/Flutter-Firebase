@@ -18,8 +18,8 @@ class Crudoperaprovider with ChangeNotifier {
     notifyListeners();
     try {
       await FirebaseFirestore.instance.collection('Crud Operation').add({
-        'firstName': firstNameController.text,
-        'lastName': lastNameController.text,
+        'firstName':firstNameController.text,
+        'lastName':lastNameController.text,
       });
       print('Data created successfully');
 
